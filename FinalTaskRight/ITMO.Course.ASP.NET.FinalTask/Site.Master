@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ITMO.Course.ASP.NET.FinalTask.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="Styles.css" />
+  
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+
+            <table class="auto-style1">
+
+                <tr>
+                    <td colspan="3" id="header">
+                       
+                           <ul class="menu"> 
+                               <li><a href="Start.aspx">Главная</a></li> 
+                               <li><a href="EnterStudents.aspx">Добавление студентов</a></li> 
+                               <li><a href="LessonsList.aspx">Список изучаемых предметов</a></li> 
+                               <li><a href="AllStudents.aspx">Наши студенты</a></li> 
+                               <li><a href="BestFive.aspx">Лучшие студенты</a></li> 
+                               <li><a href="WorstFive.aspx"">Худшие студенты</a></li>
+                                <li><a href="Choice.aspx"">Узнать балл</a></li>
+
+                           </ul> 
+                     
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="side leftside">
+                       
+
+                    </td>
+
+                    <td class="main">
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+
+                    <td class="side rightside">
+
+                        <asp:Calendar ID="Calendar1" runat="server" BackColor="#FFFFCC" BorderColor="#FFCC66" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" Width="90%" BorderWidth="1px" ShowGridLines="True">
+                            <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
+                            <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
+                            <OtherMonthDayStyle ForeColor="#CC9966" />
+                            <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
+                            <SelectorStyle BackColor="#FFCC66" />
+                            <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" ForeColor="#FFFFCC" />
+                            <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
+                        </asp:Calendar>
+
+                        <asp:Image ID="Image1" runat="server"  ImageUrl="~/Hogward.jpg" Height="130px" Width="157px" />
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" id="footer">
+                       <div id="temo_footer"> 
+                           <ul class="footer_menu"> 
+                               <li><a href="Start.aspx" target="_blank">Главная</a></li> 
+                               <li><a href="EnterStudents.aspx" target="_blank">Добавление студентов</a></li> 
+                               <li><a href="LessonsList.aspx" target="_blank">Список изучаемых предметов</a></li>
+                               <li><a href="AllStudents.aspx">Наши студенты</a></li> 
+                               <li><a href="BestFive.aspx" target="_blank">Лучшие студенты</a></li> 
+                               <li><a href="WorstFive.aspx" target="_blank">Худшие студенты</a></li>
+                               <li><a href="Choice.aspx" target="_blank">Узнать балл</a></li>
+                           </ul> 
+                       </div>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+    </form>
+</body>
+</html>
